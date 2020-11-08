@@ -1,0 +1,2 @@
+$name='parvez';
+echo $name;
