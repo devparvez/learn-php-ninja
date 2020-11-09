@@ -1,46 +1,30 @@
 <?php
-//$radius=25;
-//$pi=3.14;
-//echo $pi**2;
-//order of calculation(BIDMAS);
-//echo $radius++;
-//echo $radius;
-//$age=30;
-//$age=$age+10;
-//$age-=10;
-//$age*=2;
-//echo $age;
-//echo floor($pi);
-//echo ceil($pi);
-//echo pi();
-
-//indexed arrays 
-
-$peopleOne=['parvez','Aman','ayaj'];
-//echo $peopleOne[2];
-$peopleTwo=array('jonaki','jomor','Afroza');
-//echo $peopleTwo[2];
-$ages=[30,40,50];
-//echo $ages[1];
-$ages[1]=60;
-$ages[]=70;
-array_push($ages,90);
-//print_r($ages);
-//echo count($ages);
-
-$peopleThree=array_merge($peopleOne,$peopleTwo);
-//print_r($peopleThree);
-//Associative arrays(keky and value pairs);
-$ninjaOne=['hossain'=>'black','parvez'=>'gray','afroza'=>'white'];
-//echo $ninjaOne['parvez'];
-//print_r($ninjaOne);
-$ninjaTwo=array('afroza'=>'like','jomor'=>'as');
-$ninjaTwo['toad']=['pink'];
-//print_r($ninjaTwo);
-//echo count($ninjaOne);
-$ninjaThree=array_merge($ninjaOne,$ninjaTwo);
-print_r($ninjaThree);
-
+//Loop starts here
+//$ninja = ['shaon','parvez','aman'];
+//for($i = 0; $i < count($ninja); $i++){
+   // echo $ninja[$i]. '<br>';
+//}
+//foreach($ninja as $ninj){
+   // echo $ninj. '<br>';
+//}
+$products = [
+    ['name' => 'Ata' , 'price' => '20'],
+    ['name' => 'Rice' , 'price' => '30'],
+    ['name' => 'Banana' , 'price' => '50'],
+    ['name' => 'Grapes' , 'price' => '100'],
+    ['name' => 'Kismis' , 'price' => '120'],
+   
+];
+//foreach($products as $product){
+    //echo $product['name'].' - '.$product['price'];
+    //echo '<br>';
+//}
+//$i=0;
+//while($i < count($products)){
+  //  echo $products[$i]['name'];
+  //  echo '<br>';
+   // $i++;
+//}
 
 
 ?>
@@ -52,7 +36,17 @@ print_r($ninjaThree);
     <title>Document</title>
 </head>
 <body>
-<h1></h1>
+<h1>products</h1>
+<ul>
+<?php foreach($products as $product){?>
+    <h3><?php echo $product['name']?></h3>
+    <p>$<?php echo $product['price']?></p>
+<?php } ?>
+
+
+
+
+</ul>
     
 </body>
 </html>
