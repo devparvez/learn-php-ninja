@@ -7,14 +7,14 @@
 //foreach($ninja as $ninj){
    // echo $ninj. '<br>';
 //}
-$products = [
+/*$products = [
     ['name' => 'Ata' , 'price' => '20'],
     ['name' => 'Rice' , 'price' => '30'],
     ['name' => 'Banana' , 'price' => '50'],
     ['name' => 'Grapes' , 'price' => '100'],
     ['name' => 'Kismis' , 'price' => '120'],
    
-];
+];*/
 //foreach($products as $product){
     //echo $product['name'].' - '.$product['price'];
     //echo '<br>';
@@ -26,7 +26,35 @@ $products = [
    // $i++;
 //}
 
+//Boolean starts here
 
+//echo true;
+//echo false;
+//echo 5 < 10;
+//echo 5 > 10;
+//echo 5 == 10;
+//echo 10 == 10;
+//echo 5 != 10;
+//echo 5 <= 5;
+//echo 5 >= 5;
+
+//strings
+
+//echo 'shaun' < 'yoshi'; 
+//echo 'shaun' > 'yoshi';
+//echo 'shaun' > 'Shaun';
+//echo 'mario' == 'mario';
+//echo 'mario' == 'Mario';
+
+//loose vs strict equal comperison
+
+//echo 5=='5';//loose comperison//
+//echo 5 === '5';//strict comperison//
+//echo 5 === 5;//strict comperison//
+//echo 5 == 5;//loose comperison//
+//echo 1 == true;//loose comperison//
+//echo "" == false;//loose comperison//
+echo 1 === true;//strict comperison//
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,16 +65,7 @@ $products = [
 </head>
 <body>
 <h1>products</h1>
-<ul>
-<?php foreach($products as $product){?>
-    <h3><?php echo $product['name']?></h3>
-    <p>$<?php echo $product['price']?></p>
-<?php } ?>
 
-
-
-
-</ul>
     
 </body>
 </html>
