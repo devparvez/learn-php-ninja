@@ -7,14 +7,20 @@
 //foreach($ninja as $ninj){
    // echo $ninj. '<br>';
 //}
-/*$products = [
-    ['name' => 'Ata' , 'price' => '20'],
-    ['name' => 'Rice' , 'price' => '30'],
-    ['name' => 'Banana' , 'price' => '50'],
-    ['name' => 'Grapes' , 'price' => '100'],
-    ['name' => 'Kismis' , 'price' => '120'],
+$products = [
+    ['name' => 'Ata' , 'price' => 10],
+    ['name' => 'Rice' , 'price' => 3],
+    ['name' => 'Banana' , 'price' => 20],
+    ['name' => 'Grapes' , 'price' => 100],
+    ['name' => 'Kismis' , 'price' => 2],
    
-];*/
+];
+//foreach($products as $product){
+//    if($product['price'] > 30 || $product['price'] < 10){
+//        echo $product['name']. '<br>';
+ //   }
+
+//}
 //foreach($products as $product){
     //echo $product['name'].' - '.$product['price'];
     //echo '<br>';
@@ -54,7 +60,18 @@
 //echo 5 == 5;//loose comperison//
 //echo 1 == true;//loose comperison//
 //echo "" == false;//loose comperison//
-echo 1 === true;//strict comperison//
+//echo 1 === true;//strict comperison//
+
+//conditional statements
+
+// $price=20;
+// if($price<10){
+//     echo 'the condition is met';
+// }elseif($price< 30){
+//     echo 'the else if condition met';
+// }else{
+//     echo 'the condition is not met';
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +81,19 @@ echo 1 === true;//strict comperison//
     <title>Document</title>
 </head>
 <body>
-<h1>products</h1>
+<div>
+    <ul>
+        <?php foreach($products as $product){?>
+            <?php if($product['price'] > 15) {?>
+                <li><?php echo $product['name'];?></li>
+
+            <?php }?>
+        <?php }?>
+    
+    </ul>
+
+
+</div>
 
     
 </body>
