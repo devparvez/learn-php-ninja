@@ -15,6 +15,16 @@ $products = [
     ['name' => 'Kismis' , 'price' => 2],
    
 ];
+foreach($products as $product){
+    if($product['name']==='Kismis'){
+    break;
+    }
+    if($product['price'] > 15){
+        continue;
+    }
+    echo $product['name'].' ';
+
+}
 //foreach($products as $product){
 //    if($product['price'] > 30 || $product['price'] < 10){
 //        echo $product['name']. '<br>';
@@ -81,7 +91,7 @@ $products = [
     <title>Document</title>
 </head>
 <body>
-<div>
+<!-- <div>
     <ul>
         <?php foreach($products as $product){?>
             <?php if($product['price'] > 15) {?>
@@ -93,7 +103,7 @@ $products = [
     </ul>
 
 
-</div>
+</div> -->
 
     
 </body>
