@@ -1,13 +1,33 @@
 <?php
+
     //if(isset($_GET['submit']))
    // echo $_GET['email'];
     //echo $_GET['title'];
     //echo $_GET['ingredients'];
     if(isset($_POST['submit'])){
-    echo htmlspecialchars($_POST['email']);
-    echo htmlspecialchars($_POST['title']);
-    echo htmlspecialchars($_POST['ingredients']);
+    //echo htmlspecialchars($_POST['email']);
+    //echo htmlspecialchars($_POST['title']);
+    //echo htmlspecialchars($_POST['ingredients']);
+    //check the email
+    if(empty($_POST['email'])){
+        echo 'An email is required . <br>';
+    }else{
+        echo htmlspecialchars($_POST['email']);
     }
+    //check the title
+    if(empty($_POST['title'])){
+        echo 'An title is required . <br>';
+    }else{
+        echo htmlspecialchars($_POST['title']);
+    }
+    //check the email
+    if(empty($_POST['ingredients'])){
+        echo 'At least one ingredients. <br>';
+    }else{
+        echo htmlspecialchars($_POST['ingredients']);
+    }
+
+    }//end of the post check
 
 
 
