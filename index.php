@@ -16,6 +16,7 @@ $pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
 mysqli_free_result($result);
 //closing the connection
 mysqli_close($conn);
+//explode(',',$pizzas[0]['ingredients']);
 
 
 
@@ -38,15 +39,18 @@ include('templates/header.php');
                             <?php echo htmlspecialchars($pizza['title']); ?>
                         
                         </h6>
-                        <div>
-                            <?php echo htmlspecialchars($pizza['ingredients']); ?>
-                        
-                        
-                        </div>
+                       <ul>
+                        <?php foreach(explode(',',$pizza['ingredients']) as $ing) { ?>
+                            <li><?php echo htmlspecialchars($ing); ?></li>
+
+                        <?php } ?>
+                       
+                       </ul>
                     </div>
                     <div class="card-action right-align">
 
                         <a href="#" class="brand-text">More info!</a>
+                        
                     
                     </div>
                 
